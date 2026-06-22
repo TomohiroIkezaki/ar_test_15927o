@@ -1,0 +1,983 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+	 <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	 <!ENTITY a 'http://protege.stanford.edu/system#'>
+	 <!ENTITY kb 'http://dsr.nii.ac.jp/Bam3DCG/kb#'>
+	 <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	 xmlns:a="&a;"
+	 xmlns:kb="&kb;"
+	 xmlns:rdfs="&rdfs;">
+<rdfs:Class rdf:about="&kb;Acknowledgement"
+	 rdfs:label="Acknowledgement">
+	<rdfs:subClassOf rdf:resource="&kb;Project"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Acknowledgement_"
+	 a:maxCardinality="1"
+	 rdfs:label="Acknowledgement_">
+	<rdfs:domain rdf:resource="&kb;Acknowledgement"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Address--Core_Data_Index_Metadata"
+	 rdfs:label="Address--Core_Data_Index_Metadata">
+	<rdfs:subClassOf rdf:resource="&kb;Core_Data_Index_Metadata_Property"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Address_--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Address_--Core_Data_Index_Metadata">
+	<rdfs:range rdf:resource="&kb;Address--Core_Data_Index_Metadata"/>
+	<rdfs:domain rdf:resource="&kb;Bam_Heritage"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Advisors"
+	 rdfs:label="Advisors">
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Aerial_Photos"
+	 rdfs:label="Aerial_Photos">
+	<rdfs:subClassOf rdf:resource="&kb;Photos"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;After_Earthquake"
+	 rdfs:label="After_Earthquake">
+	<rdfs:subClassOf rdf:resource="&kb;On-site_Photos"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Animation"
+	 rdfs:label="Animation">
+	<rdfs:subClassOf rdf:resource="&kb;Videos_of_3DCG_Reconstruction"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Architectural_Drawings"
+	 rdfs:label="Architectural_Drawings">
+	<rdfs:subClassOf rdf:resource="&kb;Input_Datasets"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Bam_Heritage"
+	 rdfs:label="Bam_Heritage">
+	<rdfs:subClassOf rdf:resource="&kb;Project"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Before_Earthquake"
+	 rdfs:label="Before_Earthquake">
+	<rdfs:subClassOf rdf:resource="&kb;On-site_Photos"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Bibliography"
+	 rdfs:label="Bibliography">
+	<rdfs:subClassOf rdf:resource="&kb;References"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Bibliography_"
+	 a:minCardinality="1"
+	 rdfs:label="Bibliography_">
+	<rdfs:domain rdf:resource="&kb;Definition--Terminology"/>
+	<rdfs:range rdf:resource="&rdfs;Resource"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Building_Materials_and_Techniques--Core_Data_Index_Metadata"
+	 rdfs:label="Building_Materials_and_Techniques--Core_Data_Index_Metadata">
+	<rdfs:subClassOf rdf:resource="&kb;Core_Data_Index_Metadata_Property"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Building_Name-Multilingual_Equivalents--Terminology"
+	 a:minCardinality="1"
+	 rdfs:label="Building_Name-Multilingual_Equivalents--Terminology">
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&kb;Monolingual_Terms"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Building_Type-Explanation"
+	 a:maxCardinality="1"
+	 rdfs:label="Building_Type-Explanation">
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Building_Type_"
+	 rdfs:label="Building_Type_">
+	<rdfs:domain rdf:resource="&kb;Architectural_Drawings"/>
+	<rdfs:range rdf:resource="&kb;Building_Typology"/>
+	<a:inverseProperty rdf:resource="&kb;Input_Dataset"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Building_Type__"
+	 a:minCardinality="1"
+	 rdfs:label="Building_Type__">
+	<rdfs:range rdf:resource="&kb;Building_Typology"/>
+	<rdfs:domain rdf:resource="&kb;Outcomes"/>
+	<a:inverseProperty rdf:resource="&kb;Output_Dataset"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Building_Typology"
+	 rdfs:label="Building_Typology">
+	<rdfs:subClassOf rdf:resource="&kb;Knowledge"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Cartographic_Reference--Core_Data_Index_Metadata"
+	 a:minCardinality="1"
+	 rdfs:label="Cartographic_Reference--Core_Data_Index_Metadata">
+	<rdfs:comment>This is an optional sub-section used to record the two- or three-dimensional or spatial co-ordinates required for locating the monument or site within the mapping system(s) used by individual countries or nations.</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;Address--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&kb;Universal_Transverse_Mercator"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Coating_Material"
+	 rdfs:label="Coating_Material">
+	<rdfs:domain rdf:resource="&kb;Building_Materials_and_Techniques--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Collaborators_and_Sources"
+	 rdfs:label="Collaborators_and_Sources">
+	<rdfs:subClassOf rdf:resource="&kb;References"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Collaborators_and_Sources_"
+	 a:maxCardinality="1"
+	 rdfs:label="Collaborators_and_Sources_">
+	<rdfs:domain rdf:resource="&kb;Collaborators_and_Sources"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Companies"
+	 rdfs:label="Companies">
+	<rdfs:subClassOf rdf:resource="&kb;Collaborators_and_Sources"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Completed_3DCG"
+	 rdfs:label="Completed_3DCG">
+	<rdfs:subClassOf rdf:resource="&kb;Images_of_3DCG_Reconstruction"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Content_of_Research"
+	 a:maxCardinality="1"
+	 a:minCardinality="1"
+	 rdfs:label="Content_of_Research">
+	<rdfs:domain rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Contribution"
+	 a:maxCardinality="1"
+	 rdfs:label="Contribution">
+	<rdfs:domain rdf:resource="&kb;Collaborators_and_Sources"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Coordinators"
+	 rdfs:label="Coordinators">
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Core_Data_Index_Metadata_Property"
+	 rdfs:label="Core_Data_Index_Metadata_Property">
+	<rdfs:subClassOf rdf:resource="&kb;Ontology_Template"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Creator"
+	 a:maxCardinality="1"
+	 rdfs:label="Creator">
+	<rdfs:domain rdf:resource="&kb;Bibliography"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Creator--Dublin_Core_Metadata"
+	 rdfs:label="Creator--Dublin_Core_Metadata">
+	<rdfs:range rdf:resource="&kb;Individuals"/>
+	<rdfs:domain rdf:resource="&kb;On-site_Photos"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Creator-Profile"
+	 a:minCardinality="1"
+	 rdfs:label="Creator-Profile">
+	<rdfs:range rdf:resource="&kb;People"/>
+	<rdfs:domain rdf:resource="&kb;Publications"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Dataset_Input_"
+	 a:maxCardinality="1"
+	 rdfs:label="Dataset_Input_">
+	<rdfs:domain rdf:resource="&kb;Input_Datasets"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Date--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Date--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;On-site_Photos"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Date_of_Publication"
+	 a:maxCardinality="1"
+	 rdfs:label="Date_of_Publication">
+	<rdfs:domain rdf:resource="&kb;Bibliography"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Definition--Terminology"
+	 rdfs:label="Definition--Terminology">
+	<rdfs:subClassOf rdf:resource="&kb;Ontology_Schema"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Description--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Description--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Input_Datasets"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Description_--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Description_--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Multimedia"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Description_of_Publication"
+	 a:maxCardinality="1"
+	 rdfs:label="Description_of_Publication">
+	<rdfs:domain rdf:resource="&kb;Bibliography"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Designers_of_Website_Graphics"
+	 rdfs:label="Designers_of_Website_Graphics">
+	<rdfs:subClassOf rdf:resource="&kb;Developers_and_Designers"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Developement_of_3DCG_Model"
+	 rdfs:comment="Developement of Three Dimensional Computer Graphics Model"
+	 rdfs:label="Developement_of_3DCG_Model">
+	<rdfs:subClassOf rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Developer_of_3DCG"
+	 rdfs:label="Developer_of_3DCG">
+	<rdfs:range rdf:resource="&kb;Developers_of_3DCG"/>
+	<rdfs:domain rdf:resource="&kb;Person_by_Task"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Developer_of_3D_Basic_Drawing"
+	 rdfs:label="Developer_of_3D_Basic_Drawing">
+	<rdfs:domain rdf:resource="&kb;Person_by_Task"/>
+	<rdfs:range rdf:resource="&rdfs;Resource"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Developers_and_Designers"
+	 rdfs:label="Developers_and_Designers">
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Developers_of_3DCG"
+	 rdfs:comment="Developer of Three Dimensional Computer Graphics"
+	 rdfs:label="Developers_of_3DCG">
+	<rdfs:subClassOf rdf:resource="&kb;Developers_and_Designers"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Developers_of_3D_Basic_Drawing_"
+	 rdfs:label="Developers_of_3D_Basic_Drawing_">
+	<rdfs:subClassOf rdf:resource="&kb;Developers_and_Designers"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Developers_of_Ontology_Knowledge_Base"
+	 rdfs:label="Developers_of_Ontology_Knowledge_Base">
+	<rdfs:subClassOf rdf:resource="&kb;Developers_and_Designers"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Developers_of_VR"
+	 rdfs:comment="Developer of Virtual Reality"
+	 rdfs:label="Developers_of_VR">
+	<rdfs:subClassOf rdf:resource="&kb;Developers_and_Designers"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Developers_of_Website"
+	 rdfs:label="Developers_of_Website">
+	<rdfs:subClassOf rdf:resource="&kb;Developers_and_Designers"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Development_of_3D_Basic_Drawing"
+	 rdfs:comment="Developement of Three Dimensional Drawing"
+	 rdfs:label="Development_of_3D_Basic_Drawing">
+	<rdfs:subClassOf rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Drawings-2D"
+	 rdfs:comment="Two Dimensional Computer Graphics"
+	 rdfs:label="Drawings-2D">
+	<rdfs:subClassOf rdf:resource="&kb;Architectural_Drawings"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Drawings-3D"
+	 rdfs:comment="Three Dimensional Computer Graphics"
+	 rdfs:label="Drawings-3D">
+	<rdfs:subClassOf rdf:resource="&kb;Architectural_Drawings"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Email_Address"
+	 rdfs:label="Email_Address">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;English_References"
+	 rdfs:label="English_References">
+	<rdfs:subClassOf rdf:resource="&kb;Bibliography"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;English_Terms"
+	 rdfs:label="English_Terms">
+	<rdfs:subClassOf rdf:resource="&kb;Monolingual_Terms"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Event_"
+	 a:maxCardinality="1"
+	 rdfs:label="Event_">
+	<rdfs:domain rdf:resource="&kb;Events"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Events"
+	 rdfs:label="Events">
+	<rdfs:subClassOf rdf:resource="&kb;Project"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Explanation"
+	 a:maxCardinality="1"
+	 rdfs:label="Explanation">
+	<rdfs:domain rdf:resource="&kb;Definition--Terminology"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Explanation_"
+	 a:maxCardinality="1"
+	 rdfs:label="Explanation_">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Explanation__"
+	 a:maxCardinality="1"
+	 rdfs:label="Explanation__">
+	<rdfs:domain rdf:resource="&kb;Persian_References"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Explanation___"
+	 a:maxCardinality="1"
+	 rdfs:label="Explanation___">
+	<rdfs:domain rdf:resource="&kb;Support_of_Finances"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Explanation____"
+	 a:maxCardinality="1"
+	 rdfs:label="Explanation____">
+	<rdfs:domain rdf:resource="&kb;Collaborators_and_Sources"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Field_Supporters"
+	 rdfs:label="Field_Supporters">
+	<rdfs:subClassOf rdf:resource="&kb;Supporters"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;French_Terms"
+	 rdfs:label="French_Terms">
+	<rdfs:subClassOf rdf:resource="&kb;Monolingual_Terms"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;General_Condition--Core_Data_Index_Metadata"
+	 rdfs:label="General_Condition--Core_Data_Index_Metadata">
+	<rdfs:comment>this slot  may be repeated in order to distinguish between the integrity of the building (demolished, ruined, remodelled, restored) and its state (good, fair, poor, or bad). A controlled vocabulary is desirable.</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;Physical_Condition--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;German_Terms"
+	 rdfs:label="German_Terms">
+	<rdfs:subClassOf rdf:resource="&kb;Monolingual_Terms"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Guidance"
+	 a:maxCardinality="1"
+	 rdfs:label="Guidance">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Historical_Summary--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Historical_Summary--Core_Data_Index_Metadata">
+	<rdfs:comment>This optional slot allows for a brief textual summary of the historical development of the building, which is particularly useful if information for sections 3Ð5 above cannot be identified precisely.</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Historical_Summary_--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Historical_Summary_--Core_Data_Index_Metadata">
+	<rdfs:domain rdf:resource="&kb;Bam_Heritage"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Image_"
+	 a:maxCardinality="1"
+	 rdfs:label="Image_">
+	<rdfs:domain rdf:resource="&kb;On-site_Photos"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Image_Snapshot_of_Video"
+	 a:maxCardinality="1"
+	 rdfs:label="Image_Snapshot_of_Video">
+	<rdfs:domain rdf:resource="&kb;Multimedia"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Image__"
+	 a:maxCardinality="1"
+	 rdfs:label="Image__">
+	<rdfs:domain rdf:resource="&kb;People"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Image___"
+	 a:maxCardinality="1"
+	 rdfs:label="Image___">
+	<rdfs:domain rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Image_of_3DCG_Reconstruction"
+	 rdfs:label="Image_of_3DCG_Reconstruction">
+	<rdfs:domain rdf:resource="&kb;Images_of_3DCG_Reconstruction"/>
+	<rdfs:range rdf:resource="&kb;Multimedia"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Images_of_3DCG_Reconstruction"
+	 rdfs:comment="Image of Three Dimensional Computer Graphics Reconstruction"
+	 rdfs:label="Images_of_3DCG_Reconstruction">
+	<rdfs:subClassOf rdf:resource="&kb;Outcomes"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Individuals"
+	 rdfs:label="Individuals">
+	<rdfs:subClassOf rdf:resource="&kb;Collaborators_and_Sources"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Input_Dataset"
+	 rdfs:label="Input_Dataset">
+	<rdfs:range rdf:resource="&kb;Architectural_Drawings"/>
+	<a:inverseProperty rdf:resource="&kb;Building_Type_"/>
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Input_Datasets"
+	 rdfs:label="Input_Datasets">
+	<rdfs:subClassOf rdf:resource="&kb;References"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Japanese_Terms"
+	 rdfs:label="Japanese_Terms">
+	<rdfs:subClassOf rdf:resource="&kb;Monolingual_Terms"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Knowledge"
+	 a:role="abstract"
+	 rdfs:label="Knowledge">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Latitude"
+	 a:maxCardinality="1"
+	 rdfs:label="Latitude">
+	<rdfs:domain rdf:resource="&kb;Latitude_and_longitude"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Latitude_and_longitude"
+	 rdfs:label="Latitude_and_longitude">
+	<rdfs:subClassOf rdf:resource="&kb;Location_Schema"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Leader_of_3DCG_Development"
+	 rdfs:label="Leader_of_3DCG_Development">
+	<rdfs:domain rdf:resource="&kb;Person_by_Task"/>
+	<rdfs:range rdf:resource="&rdfs;Resource"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Leaders"
+	 rdfs:label="Leaders">
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Literature_Review"
+	 rdfs:label="Literature_Review">
+	<rdfs:range rdf:resource="&kb;Publications"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Literature_Review_"
+	 rdfs:label="Literature_Review_">
+	<rdfs:domain rdf:resource="&kb;Bam_Heritage"/>
+	<rdfs:range rdf:resource="&kb;Bibliography"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Locality--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Locality--Core_Data_Index_Metadata">
+	<rdfs:comment>Used for commonly known non-administrative units such as hamlets and townships.</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;Address--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Location"
+	 a:maxCardinality="1"
+	 rdfs:label="Location">
+	<rdfs:domain rdf:resource="&kb;Universal_Transverse_Mercator"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Location-Cartographic_Reference--Core_Data_Index_Metadata"
+	 rdfs:label="Location-Cartographic_Reference--Core_Data_Index_Metadata">
+	<rdfs:comment>This is an optional sub-section used to record the two- or three-dimensional or spatial co-ordinates required for locating the monument or site within the mapping system(s) used by individual countries or nations.</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&kb;Universal_Transverse_Mercator"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Location-Geographic_Co-ordinates"
+	 rdfs:label="Location-Geographic_Co-ordinates">
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&kb;Location_Schema"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Location_Schema"
+	 rdfs:label="Location_Schema">
+	<rdfs:subClassOf rdf:resource="&kb;Core_Data_Index_Metadata_Property"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Location__"
+	 a:maxCardinality="1"
+	 rdfs:label="Location__">
+	<rdfs:domain rdf:resource="&kb;Latitude_and_longitude"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Longitude"
+	 a:maxCardinality="1"
+	 rdfs:label="Longitude">
+	<rdfs:domain rdf:resource="&kb;Latitude_and_longitude"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Main_Materials_and_Structural_Techniques--Core_Data_Index_Metadata">
+	<rdfs:comment>This field should be used for the main walling material, excluding partition walls. A controlled vocabulary is desirable.</rdfs:comment>
+	<rdfs:label>Main_Materials_and_Structural_Techniques--Core_Data_Index_Metadata</rdfs:label>
+	<rdfs:domain rdf:resource="&kb;Building_Materials_and_Techniques--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Material_and_Technique--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Material_and_Technique--Core_Data_Index_Metadata">
+	<rdfs:range rdf:resource="&kb;Building_Materials_and_Techniques--Core_Data_Index_Metadata"/>
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Media"
+	 rdfs:label="Media">
+	<rdfs:subClassOf rdf:resource="&kb;Events"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Monolingual_Terms"
+	 rdfs:label="Monolingual_Terms">
+	<rdfs:subClassOf rdf:resource="&kb;Terminology"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Multimedia"
+	 rdfs:label="Multimedia">
+	<rdfs:subClassOf rdf:resource="&kb;Ontology_Template"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Multimedia_"
+	 a:maxCardinality="1"
+	 rdfs:label="Multimedia_">
+	<rdfs:domain rdf:resource="&kb;Multimedia"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name"
+	 a:maxCardinality="1"
+	 rdfs:label="Name">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name--Terminology"
+	 a:maxCardinality="1"
+	 a:minCardinality="1"
+	 rdfs:label="Name--Terminology">
+	<rdfs:domain rdf:resource="&kb;Monolingual_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name_"
+	 a:maxCardinality="1"
+	 rdfs:label="Name_">
+	<rdfs:domain rdf:resource="&kb;Address--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name__"
+	 a:maxCardinality="1"
+	 rdfs:label="Name__">
+	<rdfs:domain rdf:resource="&kb;Project"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name___"
+	 a:maxCardinality="1"
+	 rdfs:label="Name___">
+	<rdfs:domain rdf:resource="&kb;Outcomes"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name____"
+	 a:maxCardinality="1"
+	 rdfs:label="Name____">
+	<rdfs:domain rdf:resource="&kb;Person_by_Task"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name_____"
+	 a:maxCardinality="1"
+	 rdfs:label="Name_____">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name______"
+	 a:maxCardinality="1"
+	 rdfs:label="Name______">
+	<rdfs:domain rdf:resource="&kb;Universal_Transverse_Mercator"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name_______"
+	 a:maxCardinality="1"
+	 rdfs:label="Name_______">
+	<rdfs:domain rdf:resource="&kb;Definition--Terminology"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name________"
+	 a:maxCardinality="1"
+	 rdfs:label="Name________">
+	<rdfs:domain rdf:resource="&kb;Latitude_and_longitude"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Name_________"
+	 a:maxCardinality="1"
+	 rdfs:label="Name_________">
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;On-site_Photos"
+	 rdfs:label="On-site_Photos">
+	<rdfs:subClassOf rdf:resource="&kb;Photos"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Online_Address"
+	 a:maxCardinality="1"
+	 rdfs:label="Online_Address">
+	<rdfs:domain rdf:resource="&kb;Open_Houses"/>
+	<rdfs:domain rdf:resource="&kb;References"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Ontology_Schema"
+	 rdfs:label="Ontology_Schema">
+	<rdfs:subClassOf rdf:resource="&a;_system_class"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Ontology_Template"
+	 rdfs:label="Ontology_Template">
+	<rdfs:subClassOf rdf:resource="&kb;Ontology_Schema"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Open_Houses"
+	 rdfs:label="Open_Houses">
+	<rdfs:subClassOf rdf:resource="&kb;Events"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Organizations"
+	 rdfs:label="Organizations">
+	<rdfs:subClassOf rdf:resource="&kb;Collaborators_and_Sources"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Outcomes"
+	 a:role="abstract"
+	 rdfs:label="Outcomes">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Output_Dataset"
+	 rdfs:label="Output_Dataset">
+	<a:inverseProperty rdf:resource="&kb;Building_Type__"/>
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&kb;Outcomes"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;People"
+	 a:role="abstract"
+	 rdfs:label="People">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Persian_References"
+	 rdfs:label="Persian_References">
+	<rdfs:subClassOf rdf:resource="&kb;Bibliography"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Persian_Terms"
+	 rdfs:label="Persian_Terms">
+	<rdfs:subClassOf rdf:resource="&kb;Monolingual_Terms"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Person_Affiliated_with"
+	 rdfs:label="Person_Affiliated_with">
+	<rdfs:range rdf:resource="&kb;Collaborators_and_Sources"/>
+	<rdfs:domain rdf:resource="&kb;People"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Person_Contribution"
+	 a:maxCardinality="1"
+	 a:minCardinality="1"
+	 rdfs:label="Person_Contribution">
+	<rdfs:domain rdf:resource="&kb;Outcomes"/>
+	<rdfs:range rdf:resource="&kb;Person_by_Task"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Person_Name"
+	 a:maxCardinality="1"
+	 rdfs:label="Person_Name">
+	<rdfs:domain rdf:resource="&kb;People"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Person_Nationality"
+	 a:maxCardinality="1"
+	 rdfs:label="Person_Nationality">
+	<rdfs:domain rdf:resource="&kb;People"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Person_Title"
+	 a:maxCardinality="1"
+	 rdfs:label="Person_Title">
+	<rdfs:domain rdf:resource="&kb;People"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Person_by_Task"
+	 rdfs:label="Person_by_Task">
+	<rdfs:subClassOf rdf:resource="&kb;Ontology_Template"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Photo_Before_and_After_Earthquake"
+	 rdfs:label="Photo_Before_and_After_Earthquake">
+	<rdfs:range rdf:resource="&kb;On-site_Photos"/>
+	<rdfs:domain rdf:resource="&kb;Outcomes"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Photos"
+	 rdfs:label="Photos">
+	<rdfs:subClassOf rdf:resource="&kb;Input_Datasets"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Physical_Condition--Core_Data_Index_Metadata"
+	 rdfs:label="Physical_Condition--Core_Data_Index_Metadata">
+	<rdfs:subClassOf rdf:resource="&kb;Core_Data_Index_Metadata_Property"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Physical_Condition_--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Physical_Condition_--Core_Data_Index_Metadata">
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&kb;Physical_Condition--Core_Data_Index_Metadata"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Place_of_Publication"
+	 a:maxCardinality="1"
+	 rdfs:label="Place_of_Publication">
+	<rdfs:domain rdf:resource="&kb;Bibliography"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Project"
+	 a:role="abstract"
+	 rdfs:label="Project">
+	<rdfs:comment>Three Dimensional Reconstitution and Virtual Reality of Bam and its Cultural Landscape</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Project_Leaders"
+	 rdfs:label="Project_Leaders">
+	<rdfs:subClassOf rdf:resource="&kb;Leaders"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Project_Supporters"
+	 rdfs:label="Project_Supporters">
+	<rdfs:subClassOf rdf:resource="&kb;Supporters"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Pronunciation_EN--Terminology"
+	 a:maxCardinality="1"
+	 rdfs:label="Pronunciation_EN--Terminology">
+	<rdfs:domain rdf:resource="&kb;English_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Pronunciation_FA--Terminology"
+	 a:maxCardinality="1"
+	 rdfs:label="Pronunciation_FA--Terminology">
+	<rdfs:domain rdf:resource="&kb;Persian_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Pronunciation_FR--Terminology"
+	 a:maxCardinality="1"
+	 rdfs:label="Pronunciation_FR--Terminology">
+	<rdfs:comment>Reference:
+http://www.wordreference.com/fr/French-Pronunciation.aspx</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;French_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Publications"
+	 rdfs:label="Publications">
+	<rdfs:subClassOf rdf:resource="&kb;Bibliography"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Publisher"
+	 a:maxCardinality="1"
+	 rdfs:label="Publisher">
+	<rdfs:domain rdf:resource="&kb;Bibliography"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Quick_Time_Virtual_Reality"
+	 rdfs:comment="Quick Time Virtual Reality"
+	 rdfs:label="Quick_Time_Virtual_Reality">
+	<rdfs:subClassOf rdf:resource="&kb;Videos_of_3DCG_Reconstruction"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Reference_of_Material"
+	 rdfs:label="Reference_of_Material">
+	<rdfs:domain rdf:resource="&kb;Input_Datasets"/>
+	<rdfs:range rdf:resource="&rdfs;Resource"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Reference_of_Pronunciation_EN"
+	 a:defaultValues="http://www.merriam-webster.com/"
+	 a:maxCardinality="1"
+	 rdfs:label="Reference_of_Pronunciation_EN">
+	<rdfs:domain rdf:resource="&kb;English_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Reference_of_Pronunciation_FA"
+	 a:defaultValues="http://en.wikipedia.org/wiki/Persian_phonology"
+	 a:maxCardinality="1"
+	 rdfs:label="Reference_of_Pronunciation_FA">
+	<rdfs:domain rdf:resource="&kb;Persian_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Reference_of_Pronunciation_FR"
+	 a:defaultValues="http://www.wordreference.com/fr/French-Pronunciation.aspx"
+	 a:maxCardinality="1"
+	 rdfs:label="Reference_of_Pronunciation_FR">
+	<rdfs:domain rdf:resource="&kb;French_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Reference_of_Pronunciation_JP"
+	 a:defaultValues="http://www.age.ne.jp/x/nrs/iso3602/iso3602.html"
+	 a:maxCardinality="1"
+	 rdfs:label="Reference_of_Pronunciation_JP">
+	<rdfs:domain rdf:resource="&kb;Japanese_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;References"
+	 a:role="abstract"
+	 rdfs:label="References">
+	<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Researchers"
+	 rdfs:label="Researchers">
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Review_of_Literature"
+	 rdfs:label="Review_of_Literature">
+	<rdfs:range rdf:resource="&kb;Definition--Terminology"/>
+	<rdfs:domain rdf:resource="&kb;Persian_Terms"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Review_of_Literature_"
+	 rdfs:label="Review_of_Literature_">
+	<rdfs:range rdf:resource="&kb;Bibliography"/>
+	<rdfs:domain rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights--Dublin_Core_Metadata"
+	 rdfs:label="Rights--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;On-site_Photos"/>
+	<rdfs:range rdf:resource="&rdfs;Resource"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights-1--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Rights-1--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Outcomes"/>
+	<rdfs:range rdf:resource="&kb;References"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights-2--Dublin_Core_Metadata"
+	 rdfs:label="Rights-2--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Outcomes"/>
+	<rdfs:range rdf:resource="&kb;References"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights_--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Rights_--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Multimedia"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights__--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Rights__--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;On-site_Photos"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights___--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Rights___--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rights____--Dublin_Core_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Rights____--Dublin_Core_Metadata">
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Rōmaji_Pronunciation_JP--Terminology"
+	 a:maxCardinality="1"
+	 rdfs:label="Rōmaji_Pronunciation_JP--Terminology">
+	<rdfs:domain rdf:resource="&kb;Japanese_Terms"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Satellite_Image"
+	 a:maxCardinality="1"
+	 rdfs:label="Satellite_Image">
+	<rdfs:domain rdf:resource="&kb;Building_Typology"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Semantic_Layer_Management"
+	 rdfs:label="Semantic_Layer_Management">
+	<rdfs:subClassOf rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Sketches"
+	 rdfs:label="Sketches">
+	<rdfs:subClassOf rdf:resource="&kb;Input_Datasets"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Source__"
+	 a:maxCardinality="1"
+	 rdfs:label="Source__">
+	<rdfs:domain rdf:resource="&kb;Persian_References"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Spatial_Referencing_System--Core_Data_Index_Metadata"
+	 a:allowedValues="UTM"
+	 a:maxCardinality="1"
+	 a:range="symbol"
+	 rdfs:label="Spatial_Referencing_System--Core_Data_Index_Metadata">
+	<rdfs:domain rdf:resource="&kb;Universal_Transverse_Mercator"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+	<a:allowedValues>Lambert</a:allowedValues>
+	<a:allowedValues>Ordnance_Survey</a:allowedValues>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Supervisor_of_3DCG_Development"
+	 rdfs:label="Supervisor_of_3DCG_Development">
+	<rdfs:domain rdf:resource="&kb;Person_by_Task"/>
+	<rdfs:range rdf:resource="&rdfs;Resource"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Supervisors"
+	 rdfs:label="Supervisors">
+	<rdfs:comment>Supervisor for Technical Correctness of Three Dimensional Computer Graphics and Virtual Reality</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Support_of_Finances"
+	 rdfs:label="Support_of_Finances">
+	<rdfs:subClassOf rdf:resource="&kb;Project"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Supporters"
+	 rdfs:label="Supporters">
+	<rdfs:subClassOf rdf:resource="&kb;People"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Technical_Correction"
+	 rdfs:label="Technical_Correction">
+	<rdfs:subClassOf rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Terminology"
+	 rdfs:label="Terminology">
+	<rdfs:subClassOf rdf:resource="&kb;Knowledge"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Texts"
+	 rdfs:label="Texts">
+	<rdfs:subClassOf rdf:resource="&kb;Input_Datasets"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Title"
+	 a:minCardinality="1"
+	 rdfs:label="Title">
+	<rdfs:domain rdf:resource="&kb;Bibliography"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Town_City--Core_Data_Index_Metadata"
+	 a:maxCardinality="1"
+	 rdfs:label="Town_City--Core_Data_Index_Metadata">
+	<rdfs:comment>Use this field if the name differs from the State Administrative Division.</rdfs:comment>
+	<rdfs:domain rdf:resource="&kb;Address--Core_Data_Index_Metadata"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Uncompleted_3DCG"
+	 rdfs:label="Uncompleted_3DCG">
+	<rdfs:subClassOf rdf:resource="&kb;Images_of_3DCG_Reconstruction"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Universal_Transverse_Mercator"
+	 rdfs:label="Universal_Transverse_Mercator">
+	<rdfs:subClassOf rdf:resource="&kb;Location_Schema"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Universities_or_Institutes"
+	 rdfs:label="Universities_or_Institutes">
+	<rdfs:subClassOf rdf:resource="&kb;Collaborators_and_Sources"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;Video_of_3DCG_Reconstruction"
+	 rdfs:label="Video_of_3DCG_Reconstruction">
+	<rdfs:range rdf:resource="&kb;Multimedia"/>
+	<rdfs:domain rdf:resource="&kb;Videos_of_3DCG_Reconstruction"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;Videos"
+	 rdfs:label="Videos">
+	<rdfs:subClassOf rdf:resource="&kb;Input_Datasets"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Videos_of_3DCG_Reconstruction"
+	 rdfs:comment="Movie of Three Dimensional Computer Graphics Reconstruction"
+	 rdfs:label="Videos_of_3DCG_Reconstruction">
+	<rdfs:subClassOf rdf:resource="&kb;Outcomes"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Virtual_3D_Reconstruction"
+	 rdfs:comment="Reconstruction_by_Three_Dimensional_Computer_Graphics"
+	 rdfs:label="Virtual_3D_Reconstruction">
+	<rdfs:subClassOf rdf:resource="&kb;Project"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;Virtual_Reality"
+	 rdfs:comment="Virtual Reality Demonstration"
+	 rdfs:label="Virtual_Reality">
+	<rdfs:subClassOf rdf:resource="&kb;Virtual_3D_Reconstruction"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;X_Coordinate"
+	 a:maxCardinality="1"
+	 a:minCardinality="1"
+	 rdfs:label="X_Coordinate">
+	<rdfs:domain rdf:resource="&kb;Universal_Transverse_Mercator"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Y_Coordinate"
+	 a:maxCardinality="1"
+	 a:minCardinality="1"
+	 rdfs:label="Y_Coordinate">
+	<rdfs:domain rdf:resource="&kb;Universal_Transverse_Mercator"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;Z_Coordinate"
+	 a:maxCardinality="1"
+	 rdfs:label="Z_Coordinate">
+	<rdfs:domain rdf:resource="&kb;Universal_Transverse_Mercator"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdfs:Class rdf:about="&kb;_3D_CG_Leaders"
+	 rdfs:label="_3D_CG_Leaders">
+	<rdfs:subClassOf rdf:resource="&kb;Leaders"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="&kb;_3D_Model_of_3DCG_Reconstruction"
+	 rdfs:label="_3D_Model_of_3DCG_Reconstruction">
+	<rdfs:subClassOf rdf:resource="&kb;Outcomes"/>
+</rdfs:Class>
+<rdf:Property rdf:about="&kb;_3D_Model_of_3DCG_Reconstruction_"
+	 a:maxCardinality="1"
+	 rdfs:label="_3D_Model_of_3DCG_Reconstruction_">
+	<rdfs:domain rdf:resource="&kb;_3D_Model_of_3DCG_Reconstruction"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+<rdf:Property rdf:about="&kb;_Element_Set"
+	 a:maxCardinality="1"
+	 rdfs:label="_Element_Set">
+	<rdfs:domain rdf:resource="&kb;On-site_Photos"/>
+	<rdfs:range rdf:resource="&rdfs;Literal"/>
+</rdf:Property>
+</rdf:RDF>
